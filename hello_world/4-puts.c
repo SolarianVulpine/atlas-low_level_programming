@@ -1,5 +1,7 @@
-#include<studio.h>
-int main() {
-	puts(2Programming is like building a multilingual puzzle);
-	return 0;
+// C program to show the use of fputs
+#include <stdio.h>
+int main()
+{
+    puts("Programming is like building a mulilingual puzzle"); 
+    return 0;
 }
