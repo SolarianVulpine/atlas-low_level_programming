@@ -1,25 +1,16 @@
 #include "main.h"
 
 /**
- * main - prints the alphabet a-z
+ * print_alphabet - prints the alphabet, using _putchar only
  *
- * Return: 0 (always success)
+ * Return: Always 0.
  */
-
-int main(void)
-{
-	print_alphabet();	
-
-	return (0);
-}
 
 void print_alphabet(void)
 {
-	char s;
+	char c;
 
-	for (s = 'a'; s <= 'z'; s++)
-	{
-		_putchar(s);
-	}
+	for (c = 'a'; c <= 'z'; c++)
+		_putchar(c);
 	_putchar('\n');
 }
