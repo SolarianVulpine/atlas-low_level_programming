@@ -1,28 +1,19 @@
 #include "main.h"
 
 /**
- * main - prints the alphabet a-z 10 times
+ * print_alphabet - prints the alphabet in lowercase
  *
- * Return: 0 (always success)
+ * Return: always 0
  */
 
-int main(void)
+int print_alphabet(void)
 {
-	print_alphabet_x10();
+	char i;
+
+	for (i = 'a'; i <= 'z'; i++)
+		_putchar(i);
+
+	_putchar('\n');
 
 	return (0);
-}
-
-void print_alphabet_x10(void)
-{
-	int i;
-
-	for (i = 0; i < 10; i++)
-	{
-		for (j = 'a'; j <= 'z'; j++)
-		{
-			_putchar(j);
-		}
-	}
-	_putchar('\n');
 }
