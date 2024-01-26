@@ -5,6 +5,8 @@
  * _isdigit - check the code
  *
  * Return: 1 if c is digit, 0 if otherwise.
+ *
+ * @c : represents digit
  */
 
 int _isdigit(int c)
