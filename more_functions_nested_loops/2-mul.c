@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * multiply : multiplies two integers
+ * mul : multiplies two integers
  * 
  * @a : integer provided by checker
  *
@@ -11,7 +11,7 @@
  *
  */
 
-int multiply(int a, int b)
+int mul(int a, int b)
 
 {
 	int product = a * b;
