@@ -1,14 +1,19 @@
 #include "main.h"
 
 /**
- * mul : multiplies two integers
+ * multiply : multiplies two integers
+ * 
+ * @a : integer provided by checker
  *
- * @a : TBD
- *
- * @b : TBD
+ * @b : integer provided by checker
  *
  * Return: result of two input terms
  *
  */
 
-int mul
+int multiply(int a, int b)
+
+{
+	int product = a * b;
+	return (product);
+}
