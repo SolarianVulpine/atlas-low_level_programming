@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * fizz_buzz - prints 0-100, multipls of 3 are fizz multipls of 5 are buzz mltpls of both are fizzbuzz
+ * main - prints 0-100, multipls of 3 are fizz multipls of 5 are buzz mltpls of both are fizzbuzz
  *
  * Return 0 on success
  */
 
-int fizz_buzz(void)
+int main(void)
 {
 	int n;
 
