@@ -3,7 +3,7 @@
 /**
  * main - prints 0-100, % of 3 are fizz % of 5 are buzz % both are fizzbuzz
  *
- * return : 0 on success
+ * Return : Always 0
  */
 
 int main(void)
@@ -24,5 +24,6 @@ int main(void)
 			printf(" ");
 	}
 	printf("\n");
+
 	return (0);
 }
