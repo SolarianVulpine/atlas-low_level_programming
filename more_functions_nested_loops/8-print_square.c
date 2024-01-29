@@ -12,6 +12,7 @@
 
 void print_square(int size)
 
+	size = 'n'
 {
 	int i;
 	int j;
