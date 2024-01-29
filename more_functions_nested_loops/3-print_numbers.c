@@ -7,12 +7,8 @@
  */
 
 void print_numbers(void)
-
-{
-
-	char i = 'digit';
 	
-	{
+{
 	for (i = '0'; i <= '9'; i++)
 	
 		{
@@ -22,5 +18,4 @@ void print_numbers(void)
 		{
 		_putchar("\n");
 		}
-	}
 }
