@@ -3,7 +3,7 @@
 /**
  * main - prints 0-100, % of 3 are fizz % of 5 are buzz % both are fizzbuzz
  *
- * Return : Always 0
+ * Return : 0 on success
  */
 
 int main(void)
