@@ -9,11 +9,18 @@
 void print_numbers(void)
 
 {
-	char digit;
-	
-	for (digit = '0'; digit <= '9'; digit++)
-	{
-		_putchar("%d\n", digit);
-	}
 
+	char i = 'digit';
+	
+	{
+	for (i = '0'; i <= '9'; i++)
+	
+		{
+		_putchar("%d", i);
+		}
+	
+		{
+		_putchar("\n");
+		}
+	}
 }
