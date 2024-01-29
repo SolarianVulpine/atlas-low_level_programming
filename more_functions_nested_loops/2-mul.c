@@ -2,7 +2,7 @@
 
 /**
  * mul : multiplies two integers
- * 
+ *
  * @a : integer provided by checker
  *
  * @b : integer provided by checker
@@ -15,5 +15,6 @@ int mul(int a, int b)
 
 {
 	int product = a * b;
+
 	return (product);
 }
