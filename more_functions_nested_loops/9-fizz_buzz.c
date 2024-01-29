@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints 0-100, multipls of 3 are fizz multipls of 5 are buzz mltpls of both are fizzbuzz
+ * main - prints 0-100, % of 3 are fizz % of 5 are buzz % both are fizzbuzz
  *
  * Return 0 on success
  */
@@ -19,7 +19,7 @@ int main(void)
 		else if (n % 5 == 0)
 			printf("Buzz");
 		else
-			printf("%d",n);
+			printf("%d", n);
 		if (n < 100)
 			printf(" ");
 	}
