@@ -10,13 +10,11 @@
  * @j : iterate over columns
  */
 
-void print_square(int size)
+void print_square(int n)
 
-	size = 'n'
 {
 	int i;
 	int j;
-	int n;
 
 	for(i = 1; i <= n; i++)
 	{
