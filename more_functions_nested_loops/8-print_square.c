@@ -4,10 +4,6 @@
  * print_square - will print the # symbol to create a square
  *
  * @n : length or amount of #
- *
- * @i : iterate through rows
- *
- * @j : iterate over columns
  */
 
 void print_square(int n)
@@ -16,12 +12,18 @@ void print_square(int n)
 	int i;
 	int j;
 
-	for(i = 1; i <= n; i++)
+	if (n > 0)
 	{
-		for(j = 1; j <= n; j++)
+		for(i = 1; i <= n; i++)
 		{
-			_putchar('#');
+			for(j = 1; j <= n; j++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
+
+	if (n <= 0)
+		_putchar('\n');
 }
