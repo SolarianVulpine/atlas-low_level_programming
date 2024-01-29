@@ -19,4 +19,5 @@ int fizz_buzz(void)
 		else
 			printf("%d\n",n);
 	}
+	return (0);
 }
