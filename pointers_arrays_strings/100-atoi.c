@@ -8,7 +8,7 @@
  * @s: The input string.
  *
  * Return: The converted integer or 0 if no digit is found.
- * #without Allen's help i never woulda got this. 
+ * #without Allen's help i never woulda got this.
  * #Descriptions are provided by him to help me understand later in review
  */
 int _atoi(char *s)
