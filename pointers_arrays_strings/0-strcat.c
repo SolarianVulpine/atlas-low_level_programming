@@ -4,10 +4,10 @@
 /**
  * *_strcat - aims to concatenate 2 strings overwriting a null byte to do so
  *
- * @s1 : the destination string 1
- * @s2 : the source string 2 which will appended to string 1
+ * @dest : the destination string 1
+ * @src : the source string 2 which will appended to string 1
  *
- * Return : s1 the destination pointer
+ * Return : dest the destination pointer
  */
 
 char *_strcat(char *dest, char *src)
