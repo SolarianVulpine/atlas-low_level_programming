@@ -16,18 +16,25 @@ char *_strcat(char *dest, char *src)
 	int dest_length = 0;
 	int src_length = 0;
 
-	/*runs while loop through 0 to null byte*/
-	while
-		(*(dest + dest_length))
+	/*runs while loop destination string*/
+	while (*dest)
+	{
+		dest++;
 		dest_length++;
+	}
 
 	/*copies over src string by character to dest starting at null byte*/
-	for
-		(*(src + src_length) != '\0'; src_length++, dest_length++)
-			{
-			*(dest + dest_length) = *(src + src_length);
-			}
-	*(dest + dest_length) = '\0';
+	while (*src)
+	{
+		*dest = *src;
+		dest++;
+		dest_length++;
+		src++;
+		src_length++;
+	}
+	/*ends loops at null byte*/
+	*dest = '\0';
+	dest = (dest - dest_length);
 
 	return (dest);
 }
