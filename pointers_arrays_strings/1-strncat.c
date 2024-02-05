@@ -31,7 +31,7 @@ char *_strncat(char *dest, char *src, int n)
 	/*runs while loop through src*/
 	while (src[srclen] != '\0')
 	{
-		k++;
+		srclen++;
 	}
 
 	/*checks if srclen is greater than limit*/
