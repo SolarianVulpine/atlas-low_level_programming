@@ -2,20 +2,33 @@
 #include <string.h>
 
 /**
- * _strcat - aims to concatenate 2 strings overwriting a null byte to do so
+ * *_strcat - aims to concatenate 2 strings overwriting a null byte to do so
  *
- * @dest : the destination string 1
- * @src : the source string 2 which will appended to string 1
+ * @s1 : the destination string 1
+ * @s2 : the source string 2 which will appended to string 1
  *
- * Return : dest the destination pointer
+ * Return : s1 the destination pointer
  */
 
-char *_strcat(char *dest, char *src);
+char *_strcat(char *dest, char *src)
 {
-	_strcat(*dest, *src);
+	/*declare variables for string length storage*/
+	int dest_length;
+	int src_length;
+	
+	/*runs while loop through 0 to null byte*/
+	dest_length = 0;
+	while 
+		(*(dest + dest_length))
+		dest_length++;
+	
+	/*copies over src string by character to dest starting at null byte*/
+	for 
+		(src_length = 0; *(src + src_length) != '\0'; src_length++, dest_length++)
+			{
+			*(dest + dest_length) = *(src + src_length);
+			}
+	*(dest + dest_length) = '\0';
 
-	printf("%c", *dest);
-	printf("%c", *src);
-
-	return (*dest)
+	Return (dest);
 }
