@@ -15,16 +15,17 @@ char *_strcat(char *dest, char *src)
 	/*declare variables for string length storage*/
 	int dest_length;
 	int src_length;
-	
+
 	/*runs while loop through 0 to null byte*/
 	dest_length = 0;
-	while 
+	while
 		(*(dest + dest_length))
 		dest_length++;
-	
+
 	/*copies over src string by character to dest starting at null byte*/
-	for 
-		(src_length = 0; *(src + src_length) != '\0'; src_length++, dest_length++)
+	src_length = 0;
+	for
+		(*(src + src_length) != '\0'; src_length++, dest_length++)
 			{
 			*(dest + dest_length) = *(src + src_length);
 			}
