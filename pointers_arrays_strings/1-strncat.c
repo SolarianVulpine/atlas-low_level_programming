@@ -14,7 +14,7 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int j, srclen, k, limit, temp;
+	int j, srclen, k, limit, temp
 
 	/*declare variables for string length storage*/
 	j = 0;
