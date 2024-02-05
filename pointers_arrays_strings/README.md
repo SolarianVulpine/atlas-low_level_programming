@@ -1,1 +1,1 @@
-learning pointers
+pointer repo readme file
