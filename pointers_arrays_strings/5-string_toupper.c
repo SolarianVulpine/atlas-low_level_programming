@@ -6,13 +6,18 @@
 /**
  * *string_toupper - aims to exchange lowercase letters for uppercase
  *
- * Return: 0 on success
+ * @s: the string being altered
+ *
+ * Return: the resulting string
  */
 
-char *string_toupper(char *)
+char *string_toupper(char *s)
 {
-int length = strlen(s);
-
-for (int i = 0; i < length; i++)
-	s[i] = toupper(s[i]);
+	int i;
+	
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		s[i] = s[i] - 32;
+	}
+	return (s);
 }
