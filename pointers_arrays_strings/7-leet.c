@@ -1,32 +1,35 @@
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-
 /**
- * *leet - aims to switch specific characters for numbers
+ * leet - aims to exchange specific letters for numbers
  *
- * @s: string involved
- *
- * Return: resulting string
+ * @s : pointer
+ * 
+ * Return: (s)
  */
 
 char *leet(char *s)
 {
-	int i;
-	int j;
-	char characters[60] = "AaEeOoTtLl";
-	char digits[60] = "4433007711";
+	int i = 0;
+	char MDA[5][3] = {
+		{'a', 'A', '4'},
+		{'e', 'E', '3'},
+		{'o', 'O', '0'},
+		{'t', 'T', '7'},
+		{'l', 'L', '1'}};
+	int r;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (*s)
 	{
-		for (j = 0; characters[j] != '\0'; j++)
+		for (r = 0; r <= 4; r++)
 		{
-			if (s[i] == characters[j])
-			{
-				s[i] = digits[j / 2];
-			}
+			if ((MDA[r][0] == *s) || (MDA[r][1] == *s))
+				*s = MDA[r][2];
 		}
+
+		s++;
+		i--;
+
 	}
+	s += i;
 	return (s);
 }
