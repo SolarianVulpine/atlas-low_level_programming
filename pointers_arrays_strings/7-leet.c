@@ -1,9 +1,10 @@
 #include "main.h"
+
 /**
  * leet - aims to exchange specific letters for numbers
  *
- * @s : pointer
- * 
+ * @s: pointer
+ *
  * Return: (s)
  */
 
