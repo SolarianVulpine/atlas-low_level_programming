@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /*
- * pow_recursion- the function to recursively find x^y
+ * pow_recursion - the function to recursively find x^y
  *
  * @x: the numeral to be provided
  * @y: the exponent numeral
