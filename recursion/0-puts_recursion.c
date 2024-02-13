@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /*
- * _puts_recursion - Aims to print a provided string followed by a new line via recursion
+ * _puts_recursion - Aims to print a provided string followed by \n via recursion
  *
  * @s: the provided string
  */
