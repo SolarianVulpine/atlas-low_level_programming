@@ -11,8 +11,12 @@ void _puts_recursion(char *s)
 {
 	if (*s != '\0')
 	{
-		printf("%d" , *s);
+		putchar(*s);
 		_puts_recursion(s + 1);
 	}
-	printf("\n");
+	else
+	{
+		putchar('\n');
+	}
+	return;
 }
