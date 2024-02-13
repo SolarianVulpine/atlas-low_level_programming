@@ -3,6 +3,7 @@
 
 /*
  * factorial - aims to print the result of a factorial
+ * factorial: return a value to relust the factorial of a numeral
  * @n: the provided numeral
  */
 
