@@ -9,15 +9,13 @@
  * Return : as defined by the function
  */
 
-int _sqrt_recursion(int n)
-
 int sqrt_finder(int n, int j)
 {
-	if (j ^ 2 == n)
+	if ((j ^ 2) == n)
 	{
-		return (i);
+		return (j);
 	}
-	else if (j ^ 2 > n)
+	else if ((j ^ 2) > n)
 	{
 		return (-1);
 	}
