@@ -11,7 +11,7 @@
 
 int primechecker(int n, int i)
 {
-	if (i * i > num)
+	if (i * i > n)
 	{
 		return (1);
 	}
