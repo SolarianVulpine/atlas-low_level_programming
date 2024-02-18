@@ -9,4 +9,33 @@
  * Return: determined by function
  */
 
+int primechecker(int n, int i)
+{
+	if (i * i > num)
+	{
+		return (1);
+	}
+	if (num % i == 0)
+	{
+		return (0);
+	}
+	return (primechecker(n, i + 1));
+}
 
+/**
+ * is_prime_number - calls primechecker to check if the numeral is prime
+ * @n: the numeral
+ * Return: determined by the function
+ */
+
+int is_prime_number(int n)
+{
+	if (n <= 1)
+	{
+		return (0);
+	}
+	else
+	{
+		return (primechecker(n, 2));
+	}
+}
