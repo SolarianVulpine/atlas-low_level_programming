@@ -16,6 +16,19 @@ int main(int argc, char *argv[])
 	j = atoi(argv[1]);
 	k = atoi(argv[2]);
 
-	printf("%d\n", j * k);
-	return (0);
+	if(argv[j] == NULL)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	if(argv[k] == NULL)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	else
+	{
+		printf("%d\n", j * k);
+		return (0);
+	}
 }
