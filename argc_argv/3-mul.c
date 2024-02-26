@@ -12,12 +12,6 @@ int mul(int argc, char *argv[])
 {
 	int j, k;
 
-	if (argc != 3)
-	{
-		printf("Error\n");
-		return (1);
-	}
-
 	j = atoi(argv[1]);
 	k = atoi(argv[2]);
 
