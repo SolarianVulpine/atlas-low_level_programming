@@ -2,18 +2,18 @@
 #include <stdlib.h>
 
 /**
- * add - aims to print sum of positive numbers and a new line
+ * main - aims to print sum of positive numbers and a new line
  * @argc: The number of arguments passed to the program
  * @argv: An array of pointers to the arguments
  *
  * Return: 1 if provided values are non-digits Otherwise return 0
  */
 
-int add(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int n, digit, sum = 0;
 
-	for (n = 1; num < argc; n++)
+	for (n = 1; n < argc; n++)
 	{
 		for (digit = 0; argv[n][digit]; digit++)
 		{
