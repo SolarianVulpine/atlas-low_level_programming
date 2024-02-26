@@ -16,12 +16,7 @@ int main(int argc, char *argv[])
 	j = atoi(argv[1]);
 	k = atoi(argv[2]);
 
-	if(argv[j] == NULL)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	if(argv[k] == NULL)
+	if(argc != 3)
 	{
 		printf("Error\n");
 		return (1);
