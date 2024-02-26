@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int j, k;
 
-	if(argc != 3)
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (0);
