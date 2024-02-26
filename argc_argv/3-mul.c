@@ -2,16 +2,17 @@
 #include <stdlib.h>
 
 /**
- * mul - aims to multiply two numbers
+ * main - aims to multiply two numbers
  * @argc: count of arguments
  * @argv: array of values
  * Return: 0 on success
  */
 
-int mul(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int j, k;
 
+	(void)argc;
 	j = atoi(argv[1]);
 	k = atoi(argv[2]);
 
