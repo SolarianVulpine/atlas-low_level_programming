@@ -2,8 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include <stdio.h>
-#include <stdlib.h>
+/**
+ * create_array - aims to create arr of chars and initialize
+ *
+ * @size: num of bytes to allocate
+ * @c: initiallizer
+ *
+ * Return: pointer to arr, null if fail
+ */
 
 char *create_array(unsigned int size, char c)
 {
