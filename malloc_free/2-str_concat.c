@@ -1,52 +1,70 @@
-#include "main.h"
 #include <stdlib.h>
 #include <string.h>
+#include "main.h"
 
 /**
- * str_concat - concatenates two strings
- * @s1: first string to concatenate
- * @s2: second string to concatenate
+ * str_concat-  concatenate two strings
  *
- * Return: concatenated string, NULL on failure
+ * @s1:         the first string
+ * @s2:         the second string
+ *
+ * Return:      a pointer to a newly allocated null terminated string that
+ *              contains both strings
+ *
  */
 
 char *str_concat(char *s1, char *s2)
 {
-	char *catStr;
-	int i;
-	int j;
-	int lenS1;
-	int lenS2;
+	int len1, len2;
+	int i1 = 0, i2 = 0;
+	char *res;
 
 	if (s1 == NULL)
-		s1 = "";
+		len1 = 0;
+	else
+		len1 = _strlen(s1);
 
 	if (s2 == NULL)
-		s2 = "";
+		len2 = 0;
+	else
+		len2 = _strlen(s2);
 
-	lenS1 = strlen(s1);
-	lenS2 = strlen(s2);
+	res = malloc(sizeof(char) * (len1 + len2 + 1));
 
-	catStr = malloc(sizeof(char) * (lenS1 + lenS2) + 1);
-
-	if (catStr == NULL)
-	{
+	if (res == NULL)
 		return (NULL);
-	}
 
-	/* loop through first string */
-	for (i = 0; i < lenS1; i++)
+	for (; i1 < len1; i1++)
+		res[i1] = s1[i1];
+
+	for (; i1 < (len1 + len2); i1++)
 	{
-		catStr[i] = s1[i];
+		res[i1] = s2[i2];
+		i2++;
 	}
 
-	/* loop through second string */
-	for (j = 0; j < lenS2; j++, i++)
-	{
-		catStr[i] = s2[j];
-	}
+	res[i1] = '\0';
 
-	catStr[i] = '\0';
+	return (res);
 
-	return (catStr);
+}
+
+
+/**
+ * _strlen-  determine the length of a string
+ *
+ * @s:       the string to find the longness of
+ *
+ * Return:   the longness of the string
+ *
+ */
+
+int _strlen(char *s)
+{
+	int pos = 0;
+
+	while (s[pos] != 0)
+		pos++;
+
+	return (pos);
 }
