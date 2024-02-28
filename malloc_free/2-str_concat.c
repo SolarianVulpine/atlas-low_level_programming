@@ -34,11 +34,13 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
+	/* loop through first string */
 	for (i = 0; i < lenS1; i++)
 	{
 		catStr[i] = s1[i];
 	}
 
+	/* loop through second string */
 	for (j = 0; j < lenS2; j++, i++)
 	{
 		catStr[i] = s2[j];
