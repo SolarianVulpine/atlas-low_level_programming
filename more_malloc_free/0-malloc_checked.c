@@ -9,20 +9,16 @@
  * Return: pointer to data
  */
 
-void *malloc_checked(unsigned int b) 
+void *malloc_checked(unsigned int b)
 {
-	void *ptr = malloc(b);
-	if (ptr == NULL) 
+	void *data;
+
+	data = malloc(b);
+
+	if (data == NULL)
 	{
-		printf("Memory allocation failed.\n");
 		exit(98);
 	}
-	return ptr;
-}
 
-int main(void) 
-{
-	void *mem = malloc_checked(100);
-	free(mem);
-	return  0;
+	return (data);
 }
