@@ -13,25 +13,24 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	/*i appreciated my friends assisting me while im behind*/
-	void *arr;
-	unsigned int memAlloc;
+	unsigned int i;
+	unsigned int total_size;
+	unsigned char *byte_ptr;
+	void *ptr;
+
 
 	if (nmemb == 0 || size == 0)
-	{
 		return (NULL);
-	}
 
-	memAlloc = nmemb * size;
+	total_size = nmemb * size;
+	ptr = malloc(total_size);
 
-	arr = malloc(memAlloc);
-
-	if (arr == NULL)
-	{
+	if (ptr == NULL)
 		return (NULL);
-	}
 
-	memset(arr, 0, memAlloc);
+	byte_ptr = (unsigned char *)ptr;
+	for (i = 0; i < total_size; i++)
+		byte_ptr[i] = 0;
 
-	return (arr);
+	return (ptr);
 }
