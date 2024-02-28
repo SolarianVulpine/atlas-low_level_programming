@@ -1,1 +1,1 @@
-i'm trying to get at least one task pushed in each project
+not empty get at least one thing pushed in each priject
