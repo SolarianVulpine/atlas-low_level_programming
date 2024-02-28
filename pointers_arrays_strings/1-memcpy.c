@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _memcpy - aims to copy the contents of 'n' bytes from memory area 'src' to 'dest'
+ * _memcpy - aims to copy content of 'n' bytes from mem 'src' to 'dest'
  *
  * @dest: the destination for copy
  * @src: the origin of copy
