@@ -5,6 +5,8 @@
  *
  * @s1: pointer?
  * @s2: next pointer?
+ *
+ * Return: p - 1 - s1
  */
 
 unsigned int _strspn(char *s1, char *s2)
@@ -12,8 +14,7 @@ unsigned int _strspn(char *s1, char *s2)
 	register const char *p = s1, *spanp;
 	register char c, sc;
 
-continue:
-
+cont:
 	c = *p++;
 	for (spanp = s2; (sc = *spanp++) != 0;)
 		if (sc == c)
