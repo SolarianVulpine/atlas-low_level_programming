@@ -13,7 +13,7 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	//i appreciated my friends assisting me while im behind//
+	/*i appreciated my friends assisting me while im behind*/
 	void *arr;
 	unsigned int memAlloc;
 
