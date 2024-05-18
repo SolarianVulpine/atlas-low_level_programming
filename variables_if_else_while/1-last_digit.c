@@ -5,7 +5,8 @@
 /**
  * main - entry point of my function
  *
- * Description: The aim of my code is to print the last digit of a randdomly assigned variable "n"
+ * Description: The aim of my code is to print the last
+ * digit of a randdomly assigned variable "n"
  *
  * Return: Always 0 (success)
  */
