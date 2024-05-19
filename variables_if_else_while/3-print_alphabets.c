@@ -10,21 +10,18 @@ int main(void)
 {
 	int i;
 	{
-		while(i != 90)
+		for(i = 97, i <= 122, i++)
 		{
-			for(i = 97, i <= 122, i++)
-			{
-				putchar('i');
-			}
-			for(i = 65, i <= 90, i++)
-			{
-				putchar('i');
-			}
+			putchar(i);
 		}
-		if(i == 90)
+		for(i = 65, i <= 90, i++)
 		{
-			putchar('\n');
+			putchar(i);
 		}
 	}
-		return (0);
+	if(i == 90)
+	{
+		putchar('\n');
+	}
+	return (0);
 }
