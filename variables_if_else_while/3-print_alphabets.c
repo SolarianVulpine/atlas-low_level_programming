@@ -11,7 +11,14 @@
 int main(void)
 {
 	int i;
+
+	i = 0;
+
 	{
+		if (i == 90)
+		{
+			putchar('\n');
+		}
 		for (i = 97; i <= 122; i++)
 		{
 			putchar(i);
@@ -20,10 +27,6 @@ int main(void)
 		{
 			putchar(i);
 		}
-	}
-	if (i == 90)
-	{
-		putchar('\n');
 	}
 	return (0);
 }
