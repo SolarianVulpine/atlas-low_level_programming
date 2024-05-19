@@ -15,14 +15,13 @@ int main(void)
 	i = 0;
 
 	{
-		if (i == 90)
-		{
-			putchar('\n');
-		}
 		for (i = 97; i <= 122; i++)
 		{
 			putchar(i);
 		}
+
+		putchar('\n');
+
 		for (i = 65; i <= 90; i++)
 		{
 			putchar(i);
