@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include "main.h"
 
-/*
+/**
  * main - the entry point to my code
  *
  * Description: this code should print '_putchar' followed by a new line
@@ -10,8 +11,15 @@
 
 int main(void)
 {
-	printf("_putchar\n");
+	char *c;
+	int i;
+
+	c = "_putchar";
+	for (i = 0; c[i] != '\0'; i++)
+	{
+		_putchar(c[i]);
+	}
+	_putchar('\n');
 
 	return (0);
-
 }
