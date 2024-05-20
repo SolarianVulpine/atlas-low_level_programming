@@ -17,8 +17,10 @@ int main(void)
 	{
 		for (i = 48; i <= 57; i++)
 		{
-			//if (i != 57)
-			//{
+			/*
+			 * if (i != 57)
+			 * {
+			 */
 			putchar(i);
 			if (i == 57)
 			{
@@ -26,11 +28,13 @@ int main(void)
 			}
 			putchar(',');
 			putchar(' ');
-			//}
-			//else if (i == 57)
-			//{
-			//	putchar(i);
-			//}
+			/*
+			 * }
+			 * else if (i == 57)
+			 * {
+			 * putchar(i);
+			 * }
+			 */
 		}
 
 		putchar('\n');
