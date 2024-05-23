@@ -33,10 +33,9 @@ int main(void)
 		{
 			printf("%d", i);
 		}
-		printf(" ");
-		if (1 == 100)
+		if (i < 100)
 		{
-			continue;
+			printf(" ");
 		}
 	}
 	printf("\n");
