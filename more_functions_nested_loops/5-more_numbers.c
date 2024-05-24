@@ -9,7 +9,7 @@ using putchar thrice
  * Return: will return 0 on success
  */
 
-void print_numbers(void)
+void more_numbers(void)
 {
 	int i;
 	int j = 0;
