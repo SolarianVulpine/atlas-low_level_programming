@@ -3,7 +3,8 @@
 /**
  * swap_int - will swap the values of two provided integers
  *
- * Description:
+ * Description: created a new variable to temporarily hold
+ * the value while the value is in transit to the other pointer
  *
  * @a: the first integer provided
  * @b: the second integer provided
