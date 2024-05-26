@@ -3,7 +3,7 @@
 /**
  * reset_to_98 - this code will update a pointer's value
  *
- * Description: used variable declarations to change a provided 
+ * Description: used variable declarations to change a provided
  * value to equal 98 regardless of original value
  *
  * @n: this is the provided pointer
