@@ -3,7 +3,10 @@
 /**
  * print_rev - will print a string backwards
  *
- * Description:
+ * Description: by gathering the length of the string via loop
+ * i'm able to tell putchar to print the characters starting at
+ * the end of the string, before the null, and decrease in value
+ * until we have the string printed in reverse
  *
  * @s: the provided string
  *
@@ -14,4 +17,15 @@ void print_rev(char *s)
 {
 	int i, length = 0;
 
-	while (s[length !=
+	for (; s[length] != '\0';)
+	{
+		length++;
+	}
+
+	for (i = length - 1; i >= 0; i--)
+	{
+		_putchar(s[i]);
+	}
+
+	_putchar('\n');
+}
