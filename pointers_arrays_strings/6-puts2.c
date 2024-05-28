@@ -4,8 +4,8 @@
  * puts2 - this program should print every other character
  *
  * Description: using the for loop we iterate through the string
- * using += 2 we print every other character by counting up by
- * 2 instead of by 1
+ * using += 2 we print every other character by counting in 2s
+ * instead of by 1s
  *
  * @str: the provided string
  *
