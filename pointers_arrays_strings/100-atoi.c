@@ -12,5 +12,6 @@
 
 int _atoi(char *s)
 {
-    
+    int res;
+    int 
 }
