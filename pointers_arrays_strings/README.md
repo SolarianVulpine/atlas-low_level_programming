@@ -1,1 +1,1 @@
-this is the beginning of Pointers arrays and strings
+this is the second chapter of Pointers arrays and strings
