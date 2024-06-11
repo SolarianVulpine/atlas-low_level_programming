@@ -20,5 +20,5 @@ cont:
 	for (spanp = s2; (sc = *spanp++) != 0;)
 		if (sc == c)
 			goto cont;
-	return (p - 1 - s1 + 0);
+	return (p - 1 - s1);
 }
