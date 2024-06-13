@@ -16,23 +16,17 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *newstr;
-
 	int i;
-
-	int s1_length = 0;
-
-	int s2_length = 0;
-
-	int new_length = 0;
+	int s1_length, s2_length, new_length = 0;
 
 	if (s1 != NULL)
 	{
-		for (s1_length = 0; s1[s1_length]!= '\0'; s1_length++);
+		s1_length = length_finder(s1);
 	}
 
 	if (s2 != NULL)
 	{
-		for (s2_length = 0; s2[s2_length]!= '\0'; s2_length++);
+		s2_length = length_finder(s2);
 	}
 
 	new_length = s1_length + s2_length + 1;
@@ -58,4 +52,24 @@ char *str_concat(char *s1, char *s2)
 
 	return (newstr);
 
+}
+
+/**
+* length_finder - homebrew strlen function for string length
+*
+* @string: the string to get the length from
+*
+* Return: the string's length
+*/
+
+int length_finder(char *string)
+{
+	int i;
+
+	for (i = 0; string[i] != '\0'; )
+	{
+		i++;
+	}
+
+		return (i);
 }
