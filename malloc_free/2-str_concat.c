@@ -16,19 +16,26 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *newstr;
-	int s1_length = strlen(s1);
-	int s2_length = strlen(s2);
-	int new_length = s1_length + s2_length + 1;
 
-	if (s1 == NULL)
-	{
-		return (NULL);
-	}
+    int i;
 
-	if (s2 == NULL)
+	int s1_length = 0;
+
+	int s2_length = 0;
+
+    int new_length = 0;
+
+	if (s1 != NULL)
 	{
-		return (NULL);
-	}
+        s1_length = strlen(s1);
+    }
+
+	if (s2 != NULL)
+	{
+        s2_length = strlen(s2);
+    }
+
+    new_length = s1_length + s2_length + 1;
 
 	newstr = malloc(sizeof(char) * new_length);
 
@@ -36,9 +43,18 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
+    
+    for (i = 0; i < s1_length; i++)
+    {
+        newstr[i] = s1[i];
+    }
 
-	strcpy(newstr, s1);
-	strcat(newstr, s2);
+    for (i = 0; i < s2_length; i++)
+    {
+        newstr[s1_length + i] = s2[i];
+    }
+
+    newstr[new_length - 1] = '\0';
 
 	return (newstr);
 
