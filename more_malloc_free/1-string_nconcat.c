@@ -24,22 +24,26 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i;
-
+    {
 	char *newstr;
+	unsigned int i;
+	unsigned int s1_length, s2_length, new_length = 0;
 
-	int s1_length, s2_length, new_length = 0;
+	if (s1 != NULL)
+	{
+		s1_length = length_finder(s1);
+	}
 
-	size_t n_s2_length = (s2 != NULL)? length_finder(s2) : 0;
+	if (s2 != NULL)
+	{
+		s2_length = length_finder(s2);
+	}
 
-	s1_length = (s1!= NULL)? length_finder(s1) : 0;
-	s2_length = (s2!= NULL)? n_s2_length : 0;
-
-	new_length = s1_length + ((n >= n_s2_length)? n_s2_length : n) + 1;
+	new_length = s1_length + s2_length + 1;
 
 	newstr = malloc(sizeof(char) * new_length);
 
-	if (newstr == NULL || s1 == NULL || s2 == NULL)
+	if (newstr == NULL)
 	{
 		return (NULL);
 	}
@@ -48,20 +52,30 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		newstr[i] = s1[i];
 	}
-
-	for (i = 0; i < ((size_t)n >= n_s2_length)? n_s2_length : (size_t)n); i++)
-	{
-		newstr[s1_length + i] = s2[i];
-	}
+    
+    if (n >= s2_length)
+    {
+        for (i = 0; i < s2_length; i++)
+        {
+            newstr[s1_length + i] = s2[i];
+        }
+    }
+    else if (n < s2_length)
+    {
+        for (i = 0; i < n && i < s2_length; i++)
+        {
+            newstr[s1_length + i] = s2[i];
+        }
+    }
 
 	newstr[new_length - 1] = '\0';
 
 	return (newstr);
-
+    }
 }
 
 /**
-* length_finder - homebrew length_finder function for string length
+* length_finder - homebrew strlen function for string length
 *
 * @string: the string to get the length from
 *
@@ -70,12 +84,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 int length_finder(char *string)
 {
-	int i;
-
-	for (i = 0; string[i] != '\0'; )
-	{
-		i++;
-	}
-
-		return (i);
+    int i;
+    
+    for (i = 0; string[i] != '\0'; )
+    {
+        i++;
+    }
+    
+    return (i);
 }
