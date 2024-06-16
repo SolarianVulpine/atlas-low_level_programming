@@ -24,17 +24,25 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *newstr;
 	unsigned int i;
-	unsigned int s1_length, s2_length, new_length = 0;
+	unsigned int 1_length, s2_length, new_length = 0;
 
 	if (s1 != NULL)
 	{
 		s1_length = length_finder(s1);
 	}
+    else if (s1 == NULL)
+    {
+        s1 = " ";
+    }
 
 	if (s2 != NULL)
 	{
 		s2_length = length_finder(s2);
 	}
+      else if (s2 == NULL)
+    {
+        s2 = " ";
+    }
 
 	new_length = s1_length + s2_length + 1;
 
