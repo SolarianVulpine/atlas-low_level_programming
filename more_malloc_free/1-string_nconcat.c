@@ -3,14 +3,12 @@
 #include <stdlib.h>
 
 /**
-* string_noncat - will concatenate two strings and malloc accordingly
+* string_nconcat - will concatenate two strings and malloc accordingly
 *
 * Description: "Prototype: char *string_nconcat(char *s1, char *s2,
-
 * unsigned int n); The returned pointer shall point to a newly
-
 * allocated space in memory, which contains s1, followed by the
-*  first n bytes of s2, and null terminated If the function fails,
+* first n bytes of s2, and null terminated If the function fails,
 * it should return NULL If n is greater or equal to the length of
 * s2 then use the entire string s2 if NULL is passed, treat it as
 * an empty string"
@@ -24,7 +22,6 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-    {
 	char *newstr;
 	unsigned int i;
 	unsigned int s1_length, s2_length, new_length = 0;
@@ -71,7 +68,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	newstr[new_length - 1] = '\0';
 
 	return (newstr);
-    }
 }
 
 /**
