@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * _calloc - this file is a personal recreation of the calloc function
@@ -17,7 +16,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
     /**
      * initializing variables and datatypes
      */
-    char *string;
+    char *array;
     unsigned int i;
 
     /**
@@ -32,23 +31,25 @@ void *_calloc(unsigned int nmemb, unsigned int size)
     i = nmemb * size;
 
     /**
-     * allocate memory using malloc and storing it in the array 'string'
+     * allocate memory using malloc and storing it in the array 'array'
      */
-    string = malloc(i);
+    array = malloc(i);
 
     /**
      * if the array is NULL or incalculable return NULL
      */
-    if (string == NULL)
+    if (array == NULL)
         return (NULL);
 
     /**
-     * set memory value to 0
+     * set memory value to 0 and returns the poitner
+     * memset (array, 0, i);
+     * memset not allowed
      */
-    memset (string, 0, i);
 
-    /**
-     * returns pointer
-     */
-    return (string);
+	for (i = 0; i < nmemb; i++)
+	{
+		array[i] = 0;
+	}
+	return (array);
 }
