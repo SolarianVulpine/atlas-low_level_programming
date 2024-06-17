@@ -3,17 +3,15 @@
 #include <stdlib.h>
 
 /**
-* string_noncat - will concatenate two strings and malloc accordingly
+* string_nconcat - will concatenate two strings and malloc accordingly
 *
 * Description: "Prototype: char *string_nconcat(char *s1, char *s2,
-
 * unsigned int n); The returned pointer shall point to a newly
-
 * allocated space in memory, which contains s1, followed by the
-*  first n bytes of s2, and null terminated If the function fails,
+* first n bytes of s2, and null terminated If the function fails,
 * it should return NULL If n is greater or equal to the length of
 * s2 then use the entire string s2 if NULL is passed, treat it as
-* an empty string help
+* an empty string"
 *
 * @s1: the first string
 * @s2: the second string
@@ -24,61 +22,64 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i;
-
 	char *newstr;
-
-	int s1_length, new_length = 0;
-
-	size_t n_s2_length = (s2 != NULL)? length_finder(s2) : 0;
-
-	s1_length = (s1!= NULL)? length_finder(s1) : 0;
-	/**
-	 * s2_length = (s2 != NULL)? n_s2_length : 0;
-	 */
-	s2_length = (s2!= NULL)? length_finder(s2) : 0;
-	/**
-	 * new_length = s1_length + ((n >= n_s2_length)? n_s2_length : n) + 1;
-	 */
-	new_length = s1_length + n + 1;
-
-	newstr = malloc(sizeof(char) * new_length);
-
-	if (newstr == NULL || s1 == NULL || s2 == NULL)
+	unsigned int i;
+	unsigned int s1_length, s2_length, new_length = 0;
+    
+    if (s1 != NULL)
 	{
-		return (" ");
+		s1_length = length_finder(s1);
+	}
+    else if (s1 == NULL)
+    {
+        s1 = "";
+    }
+
+	if (s2 != NULL)
+	{
+		s2_length = length_finder(s2);
+	}
+      else if (s2 == NULL)
+    {
+        s2 = "";
+    }
+
+	new_length = s1_length + s2_length + 1;
+
+	newstr = malloc(sizeof(char) * n);
+
+	if (newstr == NULL)
+	{
+		return (NULL);
 	}
 
 	for (i = 0; i < s1_length; i++)
 	{
 		newstr[i] = s1[i];
 	}
-
-	/**
-	 * for (i = 0; i < (n >= n_s2_length)? n_s2_length : n; i++)
-	 */
-	/**
-	 * for (i = 0; i < n && s2[i]!= '\0'; i++)
-	 */
-	/**
-	 * for (unsigned int i = 0; i < n && s2[i]!= '\0'; i++)
-	 */
-	for (; i < n && s2[i]!= '\0'; i++)
-	{
-		newstr[s1_length + i] = s2[i];
-	}
-	for (; i < s2_length; i++, s1_length++)
+    
+    if (n >= s2_length)
     {
-        newstr[s1_length + i] = s2[i];
+        for (i = 0; i < s2_length; i++)
+        {
+            newstr[s1_length + i] = s2[i];
+        }
     }
+    else if (n < s2_length)
+    {
+        for (i = 0; i < n && i < s2_length; i++)
+        {
+            newstr[s1_length + i] = s2[i];
+        }
+    }
+
 	newstr[new_length - 1] = '\0';
 
 	return (newstr);
-
 }
 
 /**
-* length_finder - homebrew length_finder function for string length
+* length_finder - homebrew strlen function for string length
 *
 * @string: the string to get the length from
 *
@@ -87,12 +88,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 int length_finder(char *string)
 {
-	int i;
-
-	for (i = 0; string[i] != '\0'; )
-	{
-		i++;
-	}
-
-	return (i);
+    int i;
+    
+    for (i = 0; string[i] != '\0'; )
+    {
+        i++;
+    }
+    
+    return (i);
 }
