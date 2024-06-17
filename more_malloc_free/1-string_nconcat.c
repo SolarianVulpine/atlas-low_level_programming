@@ -32,7 +32,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
     else if (s1 == NULL)
     {
-        s1 = " ";
+        s1 = "";
     }
 
 	if (s2 != NULL)
@@ -41,12 +41,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
       else if (s2 == NULL)
     {
-        s2 = " ";
+        s2 = "";
     }
 
 	new_length = s1_length + s2_length + 1;
 
-	newstr = malloc(sizeof(char) * new_length);
+	newstr = malloc(sizeof(char) * n);
 
 	if (newstr == NULL)
 	{
