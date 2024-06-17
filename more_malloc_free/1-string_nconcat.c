@@ -48,7 +48,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
      * new_length = s1_length + s2_length + 1;
      */
 
-	newstr = malloc(s1_length + n + 1);
+	newstr = malloc(s1_length + s2_length + 1);
 
 	if (newstr == NULL)
 	{
@@ -97,3 +97,15 @@ int length_finder(char *string)
     
     return (i);
 }
+
+/**
+ * int main(void)
+ * {
+ *     char *concat;
+ * 
+ *     concat = string_nconcat("Best ", "tostada", 6);
+ *     printf("%s\n", concat);
+ *     free(concat);
+ *     return (0);
+ * }
+ */
