@@ -17,4 +17,6 @@
 
 	int _putchar(char c);
 
+	int sqrt_math(int n, int i);
+
 #endif
