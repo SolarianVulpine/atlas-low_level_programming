@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * array_range -
+ * array_range - will allocate memory for an initialized array
  *
  * @min: first int in array
  * @max: last int in array
