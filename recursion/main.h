@@ -19,4 +19,6 @@
 
 	int sqrt_math(int n, int i);
 
+	int optimus_prime(int n, int i);
+
 #endif
