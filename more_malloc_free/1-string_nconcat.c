@@ -44,7 +44,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
         s2 = " ";
     }
 
-	new_length = s1_length + ((n > s2_length) ? ((s2_length) : (n))) + 1;
+	new_length = s1_length + (((n > s2_length) ? s2_length : n) + 1);
 
 	newstr = malloc(sizeof(char) * new_length);
 
