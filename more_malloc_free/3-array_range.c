@@ -50,11 +50,12 @@ int *array_range(int min, int max)
 
     /**
      * initializes the array
-     * min plus 1 ensures that the ints are set in order from min to max
+     * iterates min each time to go in order
      */
     for (i = 0; i < counter; i++)
     {
-        array[i] = min + 1;
+        array[i] = min;
+        min++;
     }
 
     /**
