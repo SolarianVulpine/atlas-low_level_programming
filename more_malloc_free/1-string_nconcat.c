@@ -26,31 +26,21 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, s1_length, s2_length, new_length = 0;
     
     if (s1 != NULL)
-	{
 		s1_length = length_finder(s1);
-	}
     else if (s1 == NULL)
-    {
         s1 = "";
-    }
 
 	if (s2 != NULL)
-	{
 		s2_length = length_finder(s2);
-	}
-      else if (s2 == NULL)
-    {
+    else if (s2 == NULL)
         s2 = "";
-    }
 
 	new_length = s1_length + (((n > s2_length) ? s2_length : n) + 1);
 
 	newstr = malloc(sizeof(char) * new_length);
 
 	if (newstr == NULL)
-	{
 		return (NULL);
-	}
 
 	for (i = 0; i < s1_length; i++)
 	{
