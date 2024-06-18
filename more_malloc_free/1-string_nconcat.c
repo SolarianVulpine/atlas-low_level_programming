@@ -24,7 +24,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *newstr;
 	unsigned int i;
-	unsigned int s1_length, s2_length = 0;
+	unsigned int s1_length, s2_length, new_length = 0;
     
     if (s1 != NULL)
 	{
@@ -32,7 +32,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
     else if (s1 == NULL)
     {
-        s1 = "";
+        s1 = " ";
     }
 
 	if (s2 != NULL)
@@ -41,14 +41,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
       else if (s2 == NULL)
     {
-        s2 = "";
+        s2 = " ";
     }
 
-	/**
-     * new_length = s1_length + s2_length + 1;
-     */
+	new_length = s1_length + s2_length + 1;
 
-	newstr = malloc(s1_length + s2_length + 1);
+	newstr = malloc(sizeof(char) * new_length);
 
 	if (newstr == NULL)
 	{
@@ -75,6 +73,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
         }
     }
 
+	newstr[new_length - 1] = '\0';
+
 	return (newstr);
 }
 
@@ -97,15 +97,3 @@ int length_finder(char *string)
     
     return (i);
 }
-
-/**
- * int main(void)
- * {
- *     char *concat;
- * 
- *     concat = string_nconcat("Best ", "tostada", 6);
- *     printf("%s\n", concat);
- *     free(concat);
- *     return (0);
- * }
- */
