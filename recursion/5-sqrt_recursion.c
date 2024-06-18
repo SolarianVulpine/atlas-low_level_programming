@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * sqrt_math - the function that will actually calculate the sqrt
  * by making a guess as to the sqrt and iterating until sqrt is found
@@ -15,19 +16,17 @@
 int sqrt_math(int n, int i)
 {
     if (n == 1)
+    {
         return (1);
-    
+    }
+
+    else if (n < 0 || i == n || (i * i) > n)
+    {
+        return (-1);
+    }
+
     else if (i * i == n)
         return (i);
-
-    else if (n < 0)\
-        return (-1);
-
-    else if (i == n)
-        return (-1);
-    
-    else if (i * i > n)
-        return (-1);
 
     else
         return (sqrt_math(n, (i++)));
