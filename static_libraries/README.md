@@ -1,0 +1,1 @@
+static libraries has been a thorn in my side here;s the readme
