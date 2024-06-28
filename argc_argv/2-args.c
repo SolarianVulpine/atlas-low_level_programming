@@ -2,14 +2,14 @@
 
 /**
  * main - this function will print all the arguments it receives
- * 
+ *
  * @argc: how many args
  * @argv: array of arg values
- * 
+ *
  * Return: 0 on success
  */
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
     int i;
 
