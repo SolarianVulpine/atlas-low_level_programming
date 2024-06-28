@@ -23,7 +23,7 @@ return (1);
 
 i = atoi(argv[1]);
 k = atoi(argv[2]);
-printf("%d\n", i * k);
+printf("%d\n", i *k);
 
 return (0);
 }
