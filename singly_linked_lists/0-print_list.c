@@ -18,22 +18,16 @@ size_t print_list(const list_t *h)
 
 	while (current != NULL)
 	{
-		if (current->str[current->len - 1] == '\0')
+		if (current->str == NULL)
 		{
 			printf("[0] (nil)\n");
 		}
 		else
 		{
-			printf("[%d] ", current->len);
-			for (int i = 0; i < current->len; i++)
-
-			{
-				putchar(current->str[i]);
-			}
-			printf("\n");
+			printf("[%d] %s\n", current->len, current->str);
 		}
 		current = current->next;
-		current++;
+		count++;
 	}
 
 	return (count);
