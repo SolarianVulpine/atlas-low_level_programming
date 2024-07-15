@@ -17,6 +17,7 @@ size_t print_listint(const listint_t *h)
 
 	for (; currentItem != NULL; currentItem = currentItem->next)
 	{
+		printf("%i\n", currentItem->n);
 		num_elements++;
 	}
 
