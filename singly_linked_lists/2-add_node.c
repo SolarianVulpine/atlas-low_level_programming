@@ -37,10 +37,33 @@ list_t *add_node(list_t **head, const char *str)
         return NULL;
     }
 
-    new_element->len = strlen(str);
+    new_element->len = _strlen(new_element->str);
     new_element->next = *head;
 
     *head = new_element;
 
     return *head;
+}
+
+/**
+ * _strlen - will return the string length
+ *
+ * Description:
+ *
+ * @str: the provided string
+ *
+ * Return: the length of the string
+ */
+
+int _strlen(char *str)
+{
+	int len = 0;
+
+	while (*str != '\0')
+	{
+		len++;
+		str++;
+	}
+
+	return (len);
 }
