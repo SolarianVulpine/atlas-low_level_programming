@@ -1,15 +1,16 @@
 #include "lists.h"
-#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
-* listint_len- gets the number of elements
+* print_listint- gets the number of elements
 *
 * @h: the list in question
 *
 * Return: number of elements
 */
 
-size_t listint_len(const listint_t *h)
+size_t print_listint(const listint_t *h)
 {
 	size_t num_elements = 0;
 	const listint_t *currentItem = h;
