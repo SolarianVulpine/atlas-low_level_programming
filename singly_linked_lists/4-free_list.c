@@ -4,7 +4,7 @@
 
 /**
  * free_list - frees a linked list
- * 
+ *
  * @head: first element in list
  */
 
