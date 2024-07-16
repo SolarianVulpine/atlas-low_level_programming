@@ -31,7 +31,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 			return (tmp);
 		}
 		tmp = tmp->next;
-        node_count++;
+		node_count++;
 	}
 
 	return (NULL);
