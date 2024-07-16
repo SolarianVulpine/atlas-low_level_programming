@@ -21,18 +21,17 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 
 	*
 	*
-	* 	if (targetIndex > 0 && tmp != NULL)
+	* if (targetIndex > 0 && tmp != NULL)
 	*/
 
 	while (tmp != NULL)
 	{
-		node_count++;
 		if (node_count == index)
 		{
 			return (tmp);
 		}
-        node_count++;
 		tmp = tmp->next;
+        node_count++;
 	}
 
 	return (NULL);
